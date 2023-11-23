@@ -21,6 +21,6 @@ public class MyWorld extends World
         Snake snake = new Snake();
         addObject(snake, 300, 300);
         Pizza pizza = new Pizza();
-        addObject(pizza, 300, 0);
+        addObject(pizza, Greenfoot.getRandomNumber(600), 0);
     }
 }
