@@ -20,5 +20,10 @@ public class Snake extends Actor
         if (Greenfoot.isKeyDown("d")) {
             move(1);
         }
+        if (isTouching(Pizza.class)) {
+            removeTouching(Pizza.class);
+            MyWorld world = (MyWorld) getWorld();
+            world.spawnPizza();
+        }
     }
 }

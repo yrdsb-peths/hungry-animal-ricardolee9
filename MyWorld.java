@@ -17,9 +17,13 @@ public class MyWorld extends World
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(600, 400, 1);
-        
         Snake snake = new Snake();
         addObject(snake, 300, 300);
+        spawnPizza();
+
+    }
+    
+    public void spawnPizza() {
         Pizza pizza = new Pizza();
         addObject(pizza, Greenfoot.getRandomNumber(600), 0);
     }
