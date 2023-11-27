@@ -15,5 +15,12 @@ public class Pizza extends Actor
     public void act()
     {
         setLocation(getX(), getY() + 1);
+        
+        // Call Game Over Function when Pizza is at the bottom of the world
+        MyWorld world = (MyWorld) getWorld();
+        if (getY() > world.getHeight()) {
+            world.gameOver();
+            world.removeObject(this);
+        }
     }
 }
