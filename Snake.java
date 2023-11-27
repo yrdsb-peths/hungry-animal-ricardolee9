@@ -15,15 +15,22 @@ public class Snake extends Actor
     public void act()
     {
         if (Greenfoot.isKeyDown("a")) {
-            move(-1);
+            move(-2);
         }
         if (Greenfoot.isKeyDown("d")) {
-            move(1);
+            move(2);
         }
+        
+        eat();
+    }
+    
+    private void eat() {
+        // Eat the pizza
         if (isTouching(Pizza.class)) {
             removeTouching(Pizza.class);
             MyWorld world = (MyWorld) getWorld();
             world.spawnPizza();
+            world.increaseScore();
         }
     }
 }
