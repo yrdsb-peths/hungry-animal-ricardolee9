@@ -8,16 +8,20 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Snake extends Actor
 {
-    /**
-     * Act - do whatever the Snake wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
-     */
+    public Snake() {
+        GreenfootImage image = getImage();
+        image.scale(100, 100);
+        setImage(image);
+    }
+    
     public void act()
     {
         if (Greenfoot.isKeyDown("a")) {
+            Log.info("Elephant moves left");
             move(-2);
         }
         if (Greenfoot.isKeyDown("d")) {
+            Log.info("Elephant moves right");
             move(2);
         }
         
