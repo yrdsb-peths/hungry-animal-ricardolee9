@@ -8,6 +8,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Snake extends Actor
 {
+    GreenfootSound sound = new GreenfootSound("./sounds/elephantcub.mp3");
     public Snake() {
         GreenfootImage image = getImage();
         image.scale(100, 100);
@@ -17,11 +18,11 @@ public class Snake extends Actor
     public void act()
     {
         if (Greenfoot.isKeyDown("a")) {
-            Log.info("Elephant moves left");
+            Log.info(getX());
             move(-2);
         }
         if (Greenfoot.isKeyDown("d")) {
-            Log.info("Elephant moves right");
+            Log.info(getX());
             move(2);
         }
         
@@ -32,6 +33,7 @@ public class Snake extends Actor
         // Eat the pizza
         if (isTouching(Pizza.class)) {
             removeTouching(Pizza.class);
+            sound.play();
             MyWorld world = (MyWorld) getWorld();
             world.spawnPizza();
             world.increaseScore();
