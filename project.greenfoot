@@ -1,5 +1,5 @@
 #Greenfoot project file
-class.MyWorld.image=bathroom-tile.jpg
+class.MyWorld.image=bluerock.jpg
 class.Pizza.image=pizza_cheese.png
 class.Snake.image=snake2.png
 dependency1.from=MyWorld
@@ -26,10 +26,10 @@ dependency7.type=UsesDependency
 dependency8.from=Snake
 dependency8.to=Pizza
 dependency8.type=UsesDependency
-editor.fx.0.height=822
-editor.fx.0.width=780
-editor.fx.0.x=760
-editor.fx.0.y=0
+editor.fx.0.height=737
+editor.fx.0.width=814
+editor.fx.0.x=360
+editor.fx.0.y=26
 height=830
 package.numDependencies=8
 package.numTargets=6
