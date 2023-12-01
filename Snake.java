@@ -8,11 +8,20 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Snake extends Actor
 {
+    // Game Sound Initialization
     GreenfootSound sound = new GreenfootSound("sounds/elephantcub.mp3");
+    
+    // Game Frames Initialization
     GreenfootImage[] idleRight = new GreenfootImage[5];
     GreenfootImage[] idleLeft = new GreenfootImage[5];
+    
+    // Game Frames Image Index
     int imageIndex = 0;
+    
+    // Character Facing
     private boolean facingRight = true;
+    
+    // Frame Timer
     SimpleTimer animationTimer = new SimpleTimer();
 
     /**
@@ -44,14 +53,18 @@ public class Snake extends Actor
      * Animate the Snake
      */
     public void animateSnake() {
+        // Every 100 ms it will change a frame
         if(animationTimer.millisElapsed() < 100) {
             return;
         }
+        // Reset Timer
         animationTimer.mark();
         if (facingRight) {            
+            // Set the image to look right
             setImage(idleRight[imageIndex]);
             imageIndex = (imageIndex + 1) % idleRight.length;
         } else {
+            // Set the image to look left
             setImage(idleLeft[imageIndex]);
             imageIndex = (imageIndex + 1) % idleLeft.length;
         }
