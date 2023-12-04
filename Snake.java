@@ -100,9 +100,11 @@ public class Snake extends Actor
         if (isTouching(Pizza.class)) {
             removeTouching(Pizza.class);
             sound.play();
-            MyWorld world = (MyWorld) getWorld();
-            world.spawnPizza();
-            world.increaseScore();
+            if (getWorld() instanceof MyWorld) {
+                MyWorld world = (MyWorld) getWorld();
+                world.spawnPizza();
+                world.increaseScore();
+            }
         }
     }
 }

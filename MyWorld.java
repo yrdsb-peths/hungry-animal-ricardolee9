@@ -23,12 +23,6 @@ public class MyWorld extends World
         addObject(scoreLabel, 50, 50);
     }
     
-    // Game Over Screen
-    public void gameOver() {
-        Label gameOverLabel = new Label("Game Over", 80);
-        addObject(gameOverLabel, getWidth()/2, getHeight()/2);
-    }
-    
     // Increases the Score
     public void increaseScore() {
         score += 1;
