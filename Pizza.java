@@ -17,10 +17,10 @@ public class Pizza extends Actor
         setLocation(getX(), getY() + 1);
         
         // Call Game Over Function when Pizza is at the bottom of the world
-        MyWorld world = (MyWorld) getWorld();
-        if (getY() > world.getHeight()) {
-            world.gameOver();
-            world.removeObject(this);
+        if (getY() > getWorld().getHeight()) {
+            GameOverWorld gameOverWorld = new GameOverWorld();
+            Greenfoot.setWorld(gameOverWorld);
+            getWorld().removeObject(this);
         }
     }
 }
