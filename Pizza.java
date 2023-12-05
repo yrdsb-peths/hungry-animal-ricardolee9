@@ -8,13 +8,14 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Pizza extends Actor
 {
-    /**
-     * Act - do whatever the Pizza wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
-     */
+    int speed = 1;
+    
     public void act()
     {
-        setLocation(getX(), getY() + 1);
+        // Pizza falls downwards
+        int x = getX();
+        int y = getY() + speed;
+        setLocation(x, y);
         
         // Call Game Over Function when Pizza is at the bottom of the world
         if (getY() > getWorld().getHeight()) {
@@ -22,5 +23,9 @@ public class Pizza extends Actor
             Greenfoot.setWorld(gameOverWorld);
             getWorld().removeObject(this);
         }
+    }
+    
+    public void setSpeed(int spd) {
+        speed = spd;
     }
 }
