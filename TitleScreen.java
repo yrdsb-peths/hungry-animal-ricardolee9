@@ -49,13 +49,13 @@ public class TitleScreen extends World
         addObject(pizza2,499,108);
         Pizza pizza3 = new Pizza();
         addObject(pizza3,558,60);
-        Label label = new Label("Press <space> to start playing", 60);
+        Label label = new Label("Press \u02C2 space \u02C3 to start playing", 60);
         addObject(label,188,254);
         label.setLocation(304,217);
         label.setLocation(379,205);
         label.setLocation(316,194);
         removeObject(label);
-        Label label2 = new Label("Press <space> to play", 45);
+        Label label2 = new Label("Press \u02C2 space \u02C3 to play", 45);
         addObject(label2,114,220);
         label2.setLocation(332,229);
         Label label3 = new Label("Use <a> & <d> to move left and right", 40);

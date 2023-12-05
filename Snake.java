@@ -106,5 +106,11 @@ public class Snake extends Actor
                 world.increaseScore();
             }
         }
+        if (isTouching(Bomb.class)) {
+            removeTouching(Bomb.class);
+            GameOverWorld gameOverWorld = new GameOverWorld();
+            Greenfoot.setWorld(gameOverWorld);
+            getWorld().removeObject(this);
+        }
     }
 }
