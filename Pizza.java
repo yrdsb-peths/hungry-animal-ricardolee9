@@ -1,13 +1,14 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class Pizza here.
+ * Food for Snake
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author Ricardo
+ * @version December 2023
  */
 public class Pizza extends Actor
 {
+    // Speed of the pizza
     int speed = 1;
     
     public void act()
@@ -25,6 +26,7 @@ public class Pizza extends Actor
         }
     }
     
+    // Change pizza speed according to the difficulty
     public void setSpeed(int spd) {
         speed = spd;
     }

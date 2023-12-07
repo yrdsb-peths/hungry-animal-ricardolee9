@@ -1,10 +1,11 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class Snake here.
+ * The object player controls to eat.
+ * Snake has to eat pizzas, if it fails to eat one or eats a bomb, game over
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author Ricardo
+ * @version December 2023
  */
 public class Snake extends Actor
 {
@@ -43,6 +44,7 @@ public class Snake extends Actor
             idleLeft[i].scale(75, 75);
         }
         
+        // Mark the Animation Timer
         animationTimer.mark();
         
         // Initial snake image
@@ -106,6 +108,7 @@ public class Snake extends Actor
                 world.increaseScore();
             }
         }
+        // Eat the bomb
         if (isTouching(Bomb.class)) {
             removeTouching(Bomb.class);
             GameOverWorld gameOverWorld = new GameOverWorld();

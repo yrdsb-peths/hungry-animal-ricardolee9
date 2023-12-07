@@ -1,9 +1,19 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
-
+/**
+ * Game World
+ * 
+ * @author Ricardo
+ * @version December 2023
+ * 
+ * The main game
+ */
 public class MyWorld extends World
 {
+    // Sets the score
     private int score = 0;
+    // Score Label Instance
     private Label scoreLabel;
+    // Difficulty Level
     int level = 1;
     
     public MyWorld()
