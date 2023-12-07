@@ -60,7 +60,7 @@ public class TitleScreen extends World
         Label label2 = new Label("Press \u02C2 space \u02C3 to play", 45);
         addObject(label2,114,220);
         label2.setLocation(332,229);
-        Label label3 = new Label("Use <a> & <d> to move left and right", 40);
+        Label label3 = new Label("Use <a> & <d> to move left and right", 30);
         addObject(label3,127,307);
         label3.setLocation(312,312);
         label2.setLocation(302,227);
