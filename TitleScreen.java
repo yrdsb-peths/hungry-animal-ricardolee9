@@ -5,6 +5,8 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * 
  * @author Ricardo
  * @version December 2023
+ * 
+ * The class that sets the initial screen of the game
  */
 public class TitleScreen extends World
 {
@@ -18,7 +20,7 @@ public class TitleScreen extends World
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(600, 400, 1); 
-
+        // Add Welcome Text to the screen
         addObject(titleLabel, 200, 100);
         prepare();
     }
